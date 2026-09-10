@@ -36,6 +36,7 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 24px;
+    position: relative; /* Necessário para alinhar o menu mobile de forma fixa */
 }
 
 .logo {
@@ -61,6 +62,22 @@ body {
 .logo img:hover {
     transform: scale(1.3);
 }
+
+/* Passo 2: Estilização padrão do botão hambúrguer (escondido em telas grandes) */
+
+.hamburguer {
+    display: none;        /* Esconde o botão por padrão no computador */
+    font-size: 28px;      /* Deixa o ícone ☰ grande e fácil de clicar */
+    background: none;     /* Remove o fundo cinza padrão de botões */
+    border: none;         /* Remove as bordas padrão de botões */
+    cursor: pointer;      /* Transforma a seta do mouse na mãozinha de clique */
+    color: var(--texto-principal);
+}
+
+
+
+
+
 
 .nav {
     display: flex;
@@ -123,4 +140,30 @@ body {
 .btn-cadastrar:hover {
     background-color: var(--vermelho-escuro);
     transition: 0.5s ease;
+}
+
+@media (max-width: 768px) {
+    /* 2. MOSTRAR O BOTÃO NO CELULAR */
+    .hamburguer {
+        display: block;    /* O botão ☰ deixa de ser invisível e aparece */
+    }
+
+    /* 3. ESCONDER O MENU HORIZONTAL */
+    .nav {
+        display: none;         /* O menu com os links some da barra principal */
+        flex-direction: column;/* Força os links a ficarem um embaixo do outro */
+        width: 100%;           /* Ocupa a largura total da tela */
+        position: absolute;    /* Permite mover o menu livremente na tela */
+        top: 100%;             /* Gruda o menu aberto logo abaixo do cabeçalho */
+        left: 0;
+        background-color: var(--cor-fundo);
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para parecer um menu flutuante */
+        gap: 16px;             /* Dá um espaço entre um link e outro */
+    }
+
+    /* 4. A CLASSE QUE ABRE O MENU */
+    .nav.ativo {
+        display: flex;         /* Quando o menu tiver a classe "ativo", ele aparece! */
+    }
 }
