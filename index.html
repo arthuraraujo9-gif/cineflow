@@ -4,22 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CineFlow</title>
+    
+    <!-- Link de vinculação do arquivo de estilos CSS personalizado -->
     <link rel="stylesheet" href="style.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    
+    <!-- Importando a fonte do projeto (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!--  URL completa oficial do Google que ativa o Material Symbols e desbuga os ícones --> 
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 <body>
+
+    <!-- HEADER -->
+    <!-- <header> é uma tag semântica: ela existe especificamente para marcar o cabeçalho do site. -->
     <header class="header">
+        <!-- Essa div limita a largura do conteúdo e organiza os itens com Flexbox -->
         <div class="header-inner">
             <a href="#" class="logo">
                 <img src="/assets/logo.png" alt="Logo Cineflow">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-                <h2 style="color: #b4182d;">Cine<span
-                style="color: #123499;">Flow</span></h2>
+                <h2 style="color: #b4182d;">Cine<span style="color: #123499;">Play</span></h2>
             </a>
 
+            <!-- Botão do menu hamburguer para telas mobile -->
             <button class="hamburguer" id="btn-menu">☰</button>
 
             <ul class="nav" id="nav">
@@ -38,6 +45,87 @@
         </div>
     </header>
 
+    <!-- HERO -->
+    <!-- <main> marca o conteúdo principal da página  -->
+    <main>
+        <!-- <section> divide as seções do projeto. O id="Início" serve para navegação por âncoras -->
+        <section class="hero" id="Início"> 
+            <!-- Envelope interno: limita a largura e organiza as colunas principais -->
+            <div class="hero-inner">
+                
+                <!-- COLUNA DA ESQUERDA: textos, botões e vantagens -->
+                <div class="hero-textos">
+                    <!-- Etiqueta de destaque acima do título  -->
+                    <span class="hero-etiqueta">Novidade</span>
+
+                    <!-- Existe um único h1 por página. O span destaca a palavra "diversão"  -->
+                    <h1 class="hero-titulo">
+                        Sua próxima experiência começa aqui.
+                        <span>Encontre sua diversão</span>
+                    </h1>
+
+                    <p class="hero-descricao">
+                        O cineflow e a plataforma completa para estudantes que procuram a melhor experiencia
+                    </p>
+
+                    <div class="hero-botoes">
+                        <a href="#" class="btn btn-primario btn-grande">Comece aqui</a>
+                        <a href="#" class="btn btn-contorno btn-grande">
+                            <span class="material-symbols-outlined">play_circle</span>
+                            ver recursos
+                        </a>
+                    </div>
+
+                    <!-- Lista semântica <ul> com pelo menos 3 vantagens e ícones do Google  -->
+                    <ul class="hero-vantagens">
+                        <li class="vantagem-card">
+                            <div class="vantagem-icone">
+                                <span class="material-symbols-outlined">devices</span>
+                            </div>
+                            <div class="vantagem-info">
+                                <h3>Acesso</h3>
+                                <p>Em qualquer dispositivo</p>
+                            </div>
+                        </li>
+                        <li class="vantagem-card">
+                            <div class="vantagem-icone">
+                                <span class="material-symbols-outlined">movie</span>
+                            </div>
+                            <div class="vantagem-info">
+                                <h3>Filmes</h3>
+                                <p>Qualidade em HD</p>
+                            </div>
+                        </li>
+                        <li class="vantagem-card">
+                            <div class="vantagem-icone">
+                                <span class="material-symbols-outlined">star</span>
+                            </div>
+                            <div class="vantagem-info">
+                                <h3>Conteúdo</h3>
+                                <p>Totalmente exclusivo</p>
+                            </div>
+                        </li>
+                        <li class="vantagem-card">
+                            <div class="vantagem-icone">
+                                <span class="material-symbols-outlined">calendar_month</span>
+                            </div>
+                            <div class="vantagem-info">
+                                <h3>Séries</h3>
+                                <p>Sempre em dia</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- COLUNA DA DIREITA: imagem ilustrativa com alt descritivo  -->
+                <div class="hero-imagem">
+                    <img src="/assets/logo.jpg" alt="Mockup do CineFlow exibindo a interface do catálogo de mídias em um aparelho eletrônico.">
+                </div>
+            </div> 
+        </section>
+    </main>
+
+    <!-- Script de controle dinâmico para interações da interface -->
     <script src="script.js"></script>
 </body>
 </html>
