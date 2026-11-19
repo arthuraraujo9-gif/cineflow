@@ -1,0 +1,224 @@
+/* CORES DO PROJETO */
+:root {
+    --azul-escuro: #123499;
+    --azul: #0031fd;
+    --vermelho: #b4182d;
+    --vermelho-escuro: #7b0202;
+    --texto-principal: #000521;
+    --preto-fundo: #0a0a0a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: var(--texto-principal);
+}
+
+/* =========================================
+   ESTILOS DA PÁGINA DE CADASTRO
+========================================= */
+
+.tela-dividida {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* LADO ESQUERDO (PRETO) */
+.lado-esquerdo {
+    flex: 1;
+    background-color: var(--preto-fundo);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+}
+
+.conteudo-esquerdo {
+    max-width: 460px;
+}
+
+.marca-destaque {
+    display: block;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 24px;
+    color: var(--vermelho);
+}
+
+.marca-destaque span {
+    color: var(--azul);
+}
+
+.conteudo-esquerdo h1 {
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.conteudo-esquerdo p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #cbd5e1;
+    margin-bottom: 36px;
+}
+
+.lista-beneficios {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.lista-beneficios li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #f8fafc;
+}
+
+.lista-beneficios .material-symbols-outlined {
+    color: var(--vermelho);
+}
+
+/* LADO DIREITO (FUNDO CLARO + CARTÃO BRANCO) */
+.lado-direito {
+    flex: 1;
+    background-color: #f4f6f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+}
+
+.area-central {
+    width: 100%;
+    max-width: 440px;
+}
+
+.voltar-inicio {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #555;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    transition: color 0.2s;
+}
+
+.voltar-inicio:hover {
+    color: var(--vermelho);
+}
+
+.voltar-inicio .material-symbols-outlined {
+    font-size: 18px;
+}
+
+/* CARTÃO BRANCO DO FORMULÁRIO */
+.cartao-cadastro {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.cartao-cadastro h2 {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--texto-principal);
+    margin-bottom: 4px;
+}
+
+.subtitulo-cartao {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 28px;
+}
+
+/* CAMPOS DO FORMULÁRIO */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.grupo-campo label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--texto-principal);
+}
+
+.grupo-campo input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.grupo-campo input:focus {
+    border-color: var(--vermelho);
+}
+
+/* BOTÃO LARGO */
+.btn-finalizar {
+    width: 100%;
+    padding: 14px;
+    margin-top: 8px;
+    background-color: var(--vermelho);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-finalizar:hover {
+    background-color: var(--vermelho-escuro);
+}
+
+.texto-entrar {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.texto-entrar a {
+    color: var(--vermelho);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* RESPONSIVO PARA CELULAR */
+@media (max-width: 850px) {
+    .tela-dividida {
+        flex-direction: column;
+    }
+    .lado-esquerdo {
+        padding: 40px 24px;
+    }
+}
